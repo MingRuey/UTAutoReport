@@ -4,8 +4,9 @@ from pathlib import Path
 OUTPATH = Path(r"/home/mrchou/code/AxisDraw/files/unfinished")
 CONTENT = \
     """Date:{date}
-    HEADER:{header}
-    {content}"""
+HEADER:{header}
+{content}
+"""
 
 dates = [
     "2019-06-04", "2019-06-06", "2019-06-11", "2019-06-13", "2019-06-18", "2019-06-20", "2019-06-25", "2019-06-27",

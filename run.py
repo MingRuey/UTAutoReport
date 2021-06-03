@@ -2,8 +2,11 @@ import shutil
 from pathlib import Path
 from pyaxidraw import axidraw
 
-FILE = Path(r"/home/mrchou/code/AxisDraw/files/out/2021-5-2_graph.svg")
+IN_DIR = Path(r"/home/mrchou/code/AxisDraw/files/out/")
 DONE_DIR = Path(r"/home/mrchou/code/AxisDraw/files/done")
+files = list(IN_DIR.glob("*.svg"))
+files.sort()
+FILE = files[0]
 
 if __name__ == "__main__":
     if not FILE.is_file:
@@ -17,8 +20,8 @@ if __name__ == "__main__":
     ad.connect()
     ad.moveto(0, 0)
     ad.options.pen_rate_raise = 100
-    # ad.disconnect()
-    # ad.plot_setup(str(FILE))
-    # ad.plot_run()
+    ad.disconnect()
+    ad.plot_setup(str(FILE))
+    ad.plot_run()
 
     shutil.move(str(FILE), str(DONE_DIR.joinpath(FILE.stem + "_done.svg")))
