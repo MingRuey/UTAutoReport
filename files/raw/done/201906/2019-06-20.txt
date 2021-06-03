@@ -1,0 +1,12 @@
+Date:2019-06-20
+HEADER:PythonBackend Logging System Continued
+The central part of formatter with encryption looks like:
+
+class EncryptedFormatter(logging.Formatter):
+
+    def format(self, record):
+        message = record.getMessage()
+        if message:
+            message = _encode(message)
+        s = self.formatMessage(message)
+        return s

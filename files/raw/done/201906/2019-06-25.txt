@@ -1,0 +1,11 @@
+Date:2019-06-25
+HEADER:PythonBackend Logging System Continued
+Thanks to the design of Python built-in logging system,
+The formatter previously mentioned is generic,
+which means we can use it for all outputs from console to files,
+without writing some special logger for each.
+For example, for a file logger we can set the formatter:
+
+new_hdlr = logging.FileHandler(file)
+formatter = logging.Formatter(fmt=str_format)
+new_hdlr.setFormatter(formatter)

@@ -1,0 +1,9 @@
+Date:2019-06-18
+HEADER:PythonBackend Logging System Continued
+Though plain logging the error message is easy,
+message may contains confidentials which we should hide.
+My solution with the problem is that,
+we writing a formatter satisfy the logging module interface.
+The formatter accpets "plain text" message,
+and encrypts the message then log it,
+we will demonstrate the code in next page.

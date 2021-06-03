@@ -1,0 +1,13 @@
+Date:2019-06-11
+HEADER:PythonBackend Logging System
+In order to make program robust and easy to debug,
+It's important to add a detailed logging messages.
+So that after crash we can recover what happended.
+Python has quite strong built-in logging module,
+we choose to build out facilities on that.
+the usage is like:
+
+import logging
+logging.baseConfig()
+
+logging.warning("something bad happended")

@@ -1,0 +1,9 @@
+Date:2019-06-04
+HEADER:Understanding Pytest
+In order to make maitanace easy,
+I attempt to add (automated) unit tests for PythonBackend.
+We use a testing framework called Pytest,
+I record some bacis structure of Pytest:
+    import pytest
+    def test_func_fast():
+        pass

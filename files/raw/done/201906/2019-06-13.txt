@@ -1,0 +1,10 @@
+Date:2019-06-13
+HEADER:PythonBackend Logging System Continued
+The logging module can configure:
+    1. where should it display the message,
+       could be file(s), console(s), or even across Web.
+    2. how serious the message is, there are 6 different levels:
+       CRITICAL ERROR WARNING INFO DEBUG NOTSET
+
+while debugging, we set the logging level to DEBUG and above,
+and turn it to WARNING and above.

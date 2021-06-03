@@ -1,0 +1,13 @@
+Date:2019-06-27
+HEADER:PythonBackend Logging System Continued
+Python is a very cool language, and has its own philosophy.
+There is a surpise in standard CPython,
+when you execute "import this",
+program will print out the famous "Zen of Python".
+
+In "Zen of Python",
+there are one sentence related to the loggings:
+"Errors should never pass silently. Unless explicitly silenced"
+
+Which means that, we should not handle Errors in a "try-catch"",
+Most APIs should explicit throw the Exception it encounters.
