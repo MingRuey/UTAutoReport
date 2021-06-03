@@ -43,7 +43,7 @@ def create_header(date: datetime.date, header: str):
 
 def _convert_to_svgline(line: str, idx: int):
     _SVGLINE = r"""<text x="120" y="{}" font-size="16" text-anchor="left" fill="black">{}</text>"""
-    return _SVGLINE.format(270 + idx * 40, line)
+    return _SVGLINE.format(270 + idx * 40, _process_string(line))
 
 
 def read_content(file: str):
@@ -96,7 +96,7 @@ if __name__ == "__main__":
     RAWPATH = Path(r"/home/mrchou/code/AxisDraw/files/inter")
     OUTPATH = Path(r"/home/mrchou/code/AxisDraw/files/out")
 
-    FILEPATH = Path(r"/home/mrchou/code/AxisDraw/files/raw/201906")
+    FILEPATH = Path(r"/home/mrchou/code/AxisDraw/files/raw/201907")
 
     for ifile in FILEPATH.glob(r"*.txt"):
         print(f"Process file {ifile.name}")
